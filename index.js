@@ -3,6 +3,10 @@ var name1, name2;
 function addName() {
   name1 = prompt("Please, enter the first player name: ");
   name2 = prompt("Please, enter the second player name: ");
+  if (name1 === null || name2 === null) {
+    alert("Something went wrong! Page will be reload automatically.");
+    location.reload();
+  }
   document.querySelector(".addBtn").remove();
   document.querySelector(".p1").innerHTML = name1;
   document.querySelector(".p2").innerHTML = name2;
